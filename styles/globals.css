@@ -27,3 +27,11 @@ body {
 html {
   height: -webkit-fill-available;
 }
+
+#__next {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
