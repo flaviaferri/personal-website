@@ -14,7 +14,7 @@ const breakpoints = [576, 768, 992, 1200];
 const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
 
 const Body = styled.div`
-  border: 2px solid #657b8b;
+  border: 4px solid #c7998c;
   border-style: double;
   background-color: #fff7f3;
   width: 60%;
