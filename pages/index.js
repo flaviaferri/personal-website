@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-const ImageTopStyled = styled(ImageTop)`
+const ImageTopStyled = styled("div")`
   position: absolute;
   left: 0;
   top: 0;
@@ -26,7 +26,7 @@ const ImageTopStyled = styled(ImageTop)`
   }
 `;
 
-const ImageBottomStyled = styled(ImageBottom)`
+const ImageBottomStyled = styled("div")`
   position: absolute;
   right: 0;
   bottom: 0;
@@ -46,9 +46,13 @@ const ImageBottomStyled = styled(ImageBottom)`
 export default function Home() {
   return (
     <Wrapper>
-      <ImageTopStyled />
+      <ImageTopStyled>
+        <ImageTop />
+      </ImageTopStyled>
       <Card />
-      <ImageBottomStyled />
+      <ImageBottomStyled>
+        <ImageBottom />
+      </ImageBottomStyled>
     </Wrapper>
   );
 }
