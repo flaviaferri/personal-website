@@ -10,6 +10,7 @@ const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
 const Wrapper = styled.div`
   display: flex;
   min-height: 100vh;
+  overflow: hidden;
 `;
 
 const ImageTopStyled = styled("div")`
