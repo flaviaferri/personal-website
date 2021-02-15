@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
 `;
 
 const ImageTopStyled = styled("div")`
