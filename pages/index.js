@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import ImageTop from "../assets/images/top.svg";
-import ImageBottom from "../assets/images/bottom.svg";
+import ImageTop from "../public/top.svg";
+import ImageBottom from "../public/bottom.svg";
 import Card from "../components/Card";
 
 const breakpoints = [576, 768, 992, 1200];

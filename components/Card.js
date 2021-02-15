@@ -126,9 +126,9 @@ function Card() {
       <SubTitle>Frontend Developer</SubTitle>
       <nav>
         <List>
-          {links.map((item) => {
+          {links.map((item, index) => {
             return (
-              <ListItem>
+              <ListItem key={index}>
                 <a target="_blank" href={item.href}>
                   <IconWrapper>{item.icon}</IconWrapper>
                 </a>
