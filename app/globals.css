@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm, editorial palette — evolves Flávia's dusty-rose identity */
+  --color-cream: #faf5ef;
+  --color-cream-deep: #f3ebe0;
+  --color-ink: #2c2420;
+  --color-ink-soft: #5c5049;
+  --color-ink-faint: #8a7d73;
+  --color-terracotta: #b8543a;
+  --color-terracotta-soft: #c4623f;
+  --color-line: #e7ddd0;
+
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(44, 36, 32, 0.04),
+    0 8px 30px rgba(44, 36, 32, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: var(--color-cream);
+}
+
+/* Focus visibility for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scroll-reveal — motion-safe only */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
