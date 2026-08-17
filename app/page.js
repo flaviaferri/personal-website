@@ -4,6 +4,7 @@ import Leaf from "@/components/Leaf";
 import {
   profile,
   about,
+  article,
   experience,
   priorCareer,
   skills,
@@ -66,6 +67,26 @@ export default function Home() {
               </p>
             ))}
           </div>
+
+          <a
+            href={article.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-8 block rounded-2xl border border-line bg-cream-deep/40 p-6 transition-colors hover:border-terracotta"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-terracotta">
+              {article.label}
+            </p>
+            <h3 className="mt-2 font-serif text-xl text-ink transition-colors group-hover:text-terracotta">
+              {article.title}
+            </h3>
+            <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
+              {article.blurb}
+            </p>
+            <span className="mt-4 inline-block text-sm font-medium text-terracotta">
+              Read on LinkedIn →
+            </span>
+          </a>
         </Section>
 
         {/* Experience */}
